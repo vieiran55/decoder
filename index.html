@@ -1,31 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Página de Exemplo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
   </head>
   <body>
-    <div>
-      <div>
-        <h2>Criptografar</h2>
-        <label for="input1">Digit o texto para criptografar:</label> <br />
-        <input type="text" id="input" name="input" /><br />
-        <button onclick=cript() >criptografar</button>
+    <header class="cabecalho"></header>
+    <body>
+      <div class="corpo">
+        <textarea
+          type="text"
+          id="input"
+          name="input"
+          class="corpo_input"
+          placeholder="Digite seu Texto"
+        ></textarea>
+        <p class="corpo_info">
+          <img
+            src="./src/imgs/bi_exclamation-circle-fill.svg"
+            alt="exclamation icon"
+            class="corpo_info_icon"
+          />
+          Apenas letras minúsculas e sem acento.
+        </p>
+        <div class="botoes_conteiner">
+          <button onclick="cript()" class="botao_cripto">Criptografar</button>
+          <button onclick="descript()" class="botao_descripto">
+            Descriptografar
+          </button>
+        </div>
+        <div id="criptografado" class="resultado_default">
+          <h3 class="resultado_titulo">Nenhuma Mensagem encontrada</h3>
+          <p class="resultado_default_texto">
+            Digite um texto que você deseja cridivtografar ou descriptografar.
+          </p>
+        </div>
+        <div id="criptografado_sucess" class="resultado_sucesso" style="display: none;">
+          <p id="resultado" class="resultado_texto">
+          </p>
+          <button onclick="copiar()" class="botao_copiar">
+            Copiar
+          </button>
+        </div>
       </div>
-      <div>
-        <p id="criptografado"></p>
-      </div>
-    </div>
-    <div>
-      <h2>Descriptografar</h2>
-      <div>
-        <label for="input2">Digit o texto para descriptografar:</label> <br />
-        <input type="text" id="input2" name="input2" /><br />
-        <button onclick=descript() >descriptografar</button>
-      </div>
-      <div>
-        <p id="decriptografado"></p>
-      </div>
-    </div>
+    </body>
   </body>
 </html>
