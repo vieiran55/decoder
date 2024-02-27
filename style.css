@@ -15,6 +15,18 @@
 }
 
 .corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sections{
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo{
   margin-top: 2rem;
   width: 100%;
   display: flex;
@@ -26,6 +38,7 @@
 .corpo_info {
   color: #343a40;
   text-align: center;
+  padding: 1rem;
 }
 
 .corpo_info_icon {
@@ -76,16 +89,22 @@
 .corpo_input {
   border: none;
   width: 90%;
-  min-height: 50vh;
+  min-height: 40vh;
   background-color: #f3f5fc;
   color: #0a3871;
   text-align: start;
   font-size: 32px;
   line-height: 48px;
   text-wrap: wrap;
+  max-width: 330px;
 }
 .conteiner_input::placeholder {
   color: #0a3871;
+}
+
+.resultado_conteiner{
+  display: flex;
+  width: 100%;
 }
 
 .resultado_default {
@@ -124,6 +143,10 @@
   align-items: center;
 }
 
+.resultado_default_img{
+  display: none;
+}
+
 .resultado_titulo {
   font-weight: 700;
   font-size: 24px;
@@ -142,6 +165,13 @@
   color: #495057;
   text-align: justify;
   padding: 30px;
+
+  width: 300px;
+  height: 300px;
+  word-wrap: break-word;
+  text-align: justify;
+  overflow: scroll;
+
 }
 
 .botao_copiar {
@@ -159,4 +189,95 @@
 
 .botao_copiar:active {
   background-color: #aab2d5;
+}
+
+@media screen and (min-width: 768px) {
+  .corpo_input{
+    max-width: none;
+    width: 90%;
+  }
+
+  .corpo_info{
+    align-self: center;
+    width: 90%;
+    text-align: start;
+  }
+
+  .botoes_conteiner{
+    flex-direction: row;
+    width: 90%;
+    height: 100px;
+  }
+
+  .botao_copiar{
+    width: 90%;
+  }
+
+  .resultado_texto{
+    width: 500px;
+    height: 500px;
+    word-wrap: break-word;
+    text-align: justify;
+    overflow: scroll;
+  }
+  
+}
+
+@media screen and (min-width: 1400px) {
+  .corpo{
+    height: 100vh;
+  }
+
+  .sections{
+    flex-direction: row;
+    height: 90%;
+    width: 90%;
+  }
+
+  .corpo_input{
+    height: 90%;
+  }
+
+  
+  .botoes_conteiner{
+    width: 70%;
+    justify-content: space-between;
+  }
+  
+  .botao_cripto{
+    width: 230px;
+  }
+  
+  .botao_descripto{
+    width: 230px;
+  }
+  
+  .resultado_conteiner{
+    width: 50%;
+  }
+
+  .resultado_default{
+    justify-content: center;
+  }
+  .resultado_default_img{
+    display: block;
+    padding: 2rem;
+  }
+  .resultado_titulo{
+    padding: 2rem;
+  }
+
+  .resultado_sucesso{
+    width: 90%;
+  }
+
+  .resultado_texto{
+    width: 90%;
+    max-width: 600px;
+    height: 100%;
+    word-wrap: break-word;
+    text-align: justify;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 }

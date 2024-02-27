@@ -9,6 +9,10 @@ function cript(){
     var cripto = document.getElementById("resultado");
     cripto.innerHTML = novaString;
   }
+  if(document.getElementById("input").value.toLowerCase() === ""){
+    document.getElementById("criptografado_sucess").style.display = "none";
+    document.getElementById("criptografado").style.display = "flex";
+  }
 }
 
 function descript(){
@@ -23,6 +27,10 @@ function descript(){
   
     var cripto = document.getElementById("resultado");
     cripto.innerHTML = novaString;
+  }
+  if(document.getElementById("input").value.toLowerCase() === ""){
+    document.getElementById("criptografado_sucess").style.display = "none";
+    document.getElementById("criptografado").style.display = "flex";
   }
 }
 

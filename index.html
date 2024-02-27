@@ -12,10 +12,10 @@
     />
     <title>Document</title>
   </head>
-  <body>
+  <body class="corpo">
     <header class="cabecalho"></header>
-    <body>
-      <div class="corpo">
+    <div class="sections">
+      <section class="conteudo">
         <textarea
           type="text"
           id="input"
@@ -37,20 +37,24 @@
             Descriptografar
           </button>
         </div>
+      </section>
+      <section class="resultado_conteiner">
         <div id="criptografado" class="resultado_default">
+          <img src="./src/imgs/findmsg.svg" alt="finding message" class="resultado_default_img">
           <h3 class="resultado_titulo">Nenhuma Mensagem encontrada</h3>
           <p class="resultado_default_texto">
-            Digite um texto que você deseja cridivtografar ou descriptografar.
+            Digite um texto que você deseja criptografar ou descriptografar.
           </p>
         </div>
-        <div id="criptografado_sucess" class="resultado_sucesso" style="display: none;">
-          <p id="resultado" class="resultado_texto">
-          </p>
-          <button onclick="copiar()" class="botao_copiar">
-            Copiar
-          </button>
+        <div
+          id="criptografado_sucess"
+          class="resultado_sucesso"
+          style="display: none"
+        >
+          <p id="resultado" class="resultado_texto"></p>
+          <button onclick="copiar()" class="botao_copiar">Copiar</button>
         </div>
-      </div>
-    </body>
+      </section>
+    </div>
   </body>
 </html>
